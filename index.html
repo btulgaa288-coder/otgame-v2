@@ -206,7 +206,7 @@ footer{
 
   <div class="grid">
 
-    <<div class="game" onclick="alert('OT Muushig удахгүй тоглох боломжтой болно!')">
+    <<div class="game" onclick=onclick="openMuushig()">
   <div class="icon" style="height:90px; position:relative; display:flex; justify-content:center; align-items:center;">
     
     <div style="
@@ -280,6 +280,82 @@ footer{
 <footer>
   © 2026 OTGAME V2
 </footer>
+<div id="muushigGame" style="
+  display:none;
+  padding:25px;
+  text-align:center;
+">
 
+  <h2>🃏 OT Muushig</h2>
+
+  <p>Таны картууд</p>
+
+  <div style="
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:20px 0;
+  ">
+
+    <div class="card">A<br>♠</div>
+    <div class="card">10<br>♥</div>
+    <div class="card">K<br>♦</div>
+    <div class="card">7<br>♣</div>
+    <div class="card">Q<br>♥</div>
+
+  </div>
+
+  <button onclick="newGame()" style="
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+  ">
+    🔄 Шинэ тоглоом
+  </button>
+
+  <button onclick="closeMuushig()" style="
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-left:8px;
+  ">
+    ← Буцах
+  </button>
+
+</div>
+
+<style>
+.card {
+  width:60px;
+  height:90px;
+  background:white;
+  border:2px solid #222;
+  border-radius:9px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  font-size:22px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+</style>
+
+<script>
+function openMuushig() {
+  document.getElementById("muushigGame").style.display = "block";
+  window.scrollTo(0, document.getElementById("muushigGame").offsetTop);
+}
+
+function closeMuushig() {
+  document.getElementById("muushigGame").style.display = "none";
+}
+
+function newGame() {
+  alert("Шинэ OT Muushig тоглоом эхэллээ! 🃏");
+}
+</script>
 </body>
 </html>
