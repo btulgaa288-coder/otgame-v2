@@ -357,7 +357,24 @@ function newGame() {
   alert("Шинэ OT Muushig тоглоом эхэллээ! 🃏");
 }
   function openMuushig() {
-  alert("OT Muushig эхэллээ!");
+  alertfunction openMuushig() {
+  document.querySelector(".game").style.display = "none";
+
+  document.body.innerHTML += `
+    <div id="muushigGame">
+      <h1>🃏 OT MUUSHIG</h1>
+      <h2>Тоглоом эхэллээ!</h2>
+
+      <div class="cards">
+        <div class="card">🂡</div>
+        <div class="card">🂱</div>
+        <div class="card">🃏</div>
+      </div>
+
+      <button onclick="location.reload()">Буцах</button>
+    </div>
+  `;
+  }
   }
 </script>
 </body>
