@@ -374,7 +374,7 @@ footer{
 
     <div class="cards">
 
-      <div class="card">
+      <div class="card"onclick="selectCard(this)">
         A
         <br>♠
       </div>
@@ -444,7 +444,10 @@ function newGame(){
   alert("🃏 Шинэ OT Muushig тоглоом эхэллээ!");
 
 }
-
+function selectCard(card) {
+  card.style.transform = "translateY(-15px)";
+  card.style.borderColor = "#ff2d55";
+  }
 </script>
 
 </body>
